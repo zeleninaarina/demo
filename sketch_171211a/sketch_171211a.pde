@@ -25,4 +25,11 @@ fill(255, 0, 0);
 for (int i = 0; i < song.bufferSize() - 50; i = i + 50) { 
 ellipse(0, 0, song.left.get(i) * 300, song.left.get(i) * 300); 
 } 
+
+fill(255, 255, 255); 
+for (int i = 0; i < song.bufferSize() - 1; i = i + 1) { 
+rotate(x); 
+ellipse(i, i, song.left.get(i) * 150, song.left.get(i) * 150); 
+x = x + 0.000001; 
+} 
 }
